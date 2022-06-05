@@ -20,10 +20,7 @@ export const useProductStore = defineStore('products',{
 
   actions: {
     async fetchAll() {
-      if (this.loaded) return;
-
       const data = dataProduct;
-      console.log(dataProduct);
       this.ids = data.map((product) => {
         this.items[product.id] = product;
         return product.id;
